@@ -46,7 +46,7 @@
 		19CF07261BCE56BA00B6D195 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		19CF07271BCE56BA00B6D195 /* Biology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Biology.h; sourceTree = "<group>"; };
 		19CF07281BCE56BA00B6D195 /* Biology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Biology.m; sourceTree = "<group>"; };
-		19E2CC2E1BD0A75F003B21DD /* WZLSerializeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLSerializeKit.h; sourceTree = "<group>"; };
+		19E2CC321BD0A89B003B21DD /* WZLSerializeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLSerializeKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 		19CF06F81BCE222000B6D195 /* WZLDemoCollection */ = {
 			isa = PBXGroup;
 			children = (
-				19E2CC2D1BD0A75F003B21DD /* WZLSerializeKit */,
+				19E2CC311BD0A89B003B21DD /* WZLSerializeKit */,
 				19CF07251BCE56BA00B6D195 /* Person.h */,
 				19CF07261BCE56BA00B6D195 /* Person.m */,
 				19CF07271BCE56BA00B6D195 /* Biology.h */,
@@ -131,13 +131,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		19E2CC2D1BD0A75F003B21DD /* WZLSerializeKit */ = {
+		19E2CC311BD0A89B003B21DD /* WZLSerializeKit */ = {
 			isa = PBXGroup;
 			children = (
-				19E2CC2E1BD0A75F003B21DD /* WZLSerializeKit.h */,
+				19E2CC321BD0A89B003B21DD /* WZLSerializeKit.h */,
 			);
 			name = WZLSerializeKit;
-			path = ../../Git/WZLDemoCollection/WZLDemoCollection/WZLSerializeKit;
+			path = ../../WZLSerializeKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
