@@ -1,5 +1,6 @@
 # WZLSerializeKit
-iOS serialization in 4 lines. 4行代码完成iOS序列化与反序列化，本文件提供iOS下的序列化与反序列集成方案。
+iOS serialization in 4 lines. 
+4行代码完成iOS序列化与反序列化，本文件提供iOS下的序列化与反序列集成方案。
 
  (EN)Provide Serialization kit for class (in ARC mode). With this serialize kit, there is no need any more
    to implement (encode:) or )decode:) everywhere, like:
