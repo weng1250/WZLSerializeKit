@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0'
   s.summary          = 'A four-line tool to enable serialize and deserialize in iOS platform'
   s.description      = <<-DESC
-                       4行代码完成iOS序列化与反序列化.
+                       A four-line tool to enable serialize and deserialize in iOS platform. 4行代码完成iOS序列化与反序列化.
                        DESC
   s.homepage         = 'https://github.com/weng1250/WZLSerializeKit'
   s.license          = { :type => 'None', :file => 'LICENSE' }
