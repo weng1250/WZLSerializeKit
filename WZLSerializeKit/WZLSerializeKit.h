@@ -47,9 +47,9 @@
  *
  *	@implementation Person
  *
- *  WZLSERIALIZE_CODER_DECODER;
- *  WZLSERIALIZE_COPY_WITH_ZONE;
- *  WZLSERIALIZE_DESCRIPTION;//(NOT NECESSARY)
+ *  WZLSERIALIZE_CODER_DECODER();
+ *  WZLSERIALIZE_COPY_WITH_ZONE();
+ *  WZLSERIALIZE_DESCRIPTION();//(NOT NECESSARY)
  *
  *	@end
  * ========================================
@@ -65,7 +65,7 @@
  *      WZLSERIALIZE_UNARCHIVE(thePerson, @"Person", [self filePath]);
  */
 
-#define WZLSERIALIZE_CODER_DECODER     \
+#define WZLSERIALIZE_CODER_DECODER()     \
 \
 - (id)initWithCoder:(NSCoder *)coder    \
 {   \
@@ -126,7 +126,7 @@
 }
 
 
-#define WZLSERIALIZE_COPY_WITH_ZONE  \
+#define WZLSERIALIZE_COPY_WITH_ZONE()  \
 \
 /*如果不实现copyWithZone:方法，则[personObject copy]时会崩溃*/   \
 - (id)copyWithZone:(NSZone *)zone   \
@@ -161,7 +161,7 @@
 }
 
 
-#define WZLSERIALIZE_DESCRIPTION \
+#define WZLSERIALIZE_DESCRIPTION() \
 \
 /* 用来打印本类的所有变量(成员变量+属性变量)，所有层级父类的属性变量及其对应的值 */  \
 - (NSString *)description   \
