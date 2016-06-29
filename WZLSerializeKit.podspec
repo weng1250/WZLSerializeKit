@@ -12,6 +12,10 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '6.0'
   s.requires_arc     = true
 	
-  s.source_files     = 'WZLSerializeKit/*.{h,m}', 'WZLSerializeKit/Dir/*.{h,m}' 
-  s.public_header_files = 'WZLSerializeKit/*.h','WZLSerializeKit/Dir/*.h'
+  s.source_files     = 'WZLSerializeKit/*.{h,m}'
+  s.public_header_files = 'WZLSerializeKit/*.h'
+  s.subspec 'Dir' do |sp|
+    sp.source_files = 'WZLSerializeKit/Dir/*.{h,m}'
+    sp.public_header_files = 'WZLSerializeKit/Dir/*.h'
+  end
 end
