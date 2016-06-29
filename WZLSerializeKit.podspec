@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
 	
   s.source_files     = 'WZLSerializeKit/*.{h,m}', 'WZLSerializeKit/Dir/*.{h,m}' 
-  s.public_header_files = 'WZLSerializeKit/**/*.{h}'
+  s.public_header_files = 'WZLSerializeKit/*.h','WZLSerializeKit/Dir/*.h'
 end
