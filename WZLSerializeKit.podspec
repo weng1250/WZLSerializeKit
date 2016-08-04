@@ -14,8 +14,4 @@ Pod::Spec.new do |s|
 	
   s.source_files     = 'WZLSerializeKit/*.{h,m}'
   s.public_header_files = 'WZLSerializeKit/*.h'
-  s.subspec 'Dir' do |sp|
-    sp.source_files = 'WZLSerializeKit/Dir/*.{h,m}'
-    sp.public_header_files = 'WZLSerializeKit/Dir/*.h'
-  end
 end
