@@ -85,7 +85,8 @@
             const char *varName = bIsSelfClass ? ivar_getName(*(ivarList + i)) : property_getName(*(propList + i)); \
             NSString *key = [NSString stringWithUTF8String:varName];   \
             id varValue = [coder decodeObjectForKey:key];   \
-            if (varValue) { \
+            NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"]; \
+            if (varValue && [filters containsObject:key] == NO) { \
                 [self setValue:varValue forKey:key];    \
             }   \
         }   \
@@ -115,7 +116,8 @@
             NSString *key = [NSString stringWithUTF8String:varName];    \
             /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
             id varValue = [self valueForKey:key];   \
-            if (varValue) { \
+            NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"]; \
+            if (varValue && [filters containsObject:key] == NO) { \
                 [coder encodeObject:varValue forKey:key];   \
             }   \
         }   \
@@ -149,7 +151,8 @@
             NSString *key = [NSString stringWithUTF8String:varName];    \
             /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
             id varValue = [self valueForKey:key];   \
-            if (varValue) { \
+            NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"]; \
+            if (varValue && [filters containsObject:key] == NO) { \
                 [copy setValue:varValue forKey:key];    \
             }   \
         }   \
@@ -183,7 +186,8 @@
             NSString *key = [NSString stringWithUTF8String:varName];    \
             /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
             id varValue = [self valueForKey:key];   \
-            if (varValue) { \
+            NSArray *filters = @[@"superclass", @"description", @"debugDescription", @"hash"]; \
+            if (varValue && [filters containsObject:key] == NO) { \
                 despStr = [despStr stringByAppendingString:[NSString stringWithFormat:@"%@: %@\n", key, varValue]]; \
             }   \
         }   \
@@ -193,7 +197,6 @@
     }   \
     return despStr; \
 }
-
 
 /* 封装归档keyedArchiver操作 */
 #define WZLSERIALIZE_ARCHIVE(__objToBeArchived__, __key__, __filePath__)    \
